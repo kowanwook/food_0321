@@ -1,0 +1,23 @@
+package food.domain;
+
+import food.domain.*;
+import food.infra.AbstractEvent;
+import java.util.*;
+import lombok.*;
+
+@Data
+@ToString
+public class Accepted extends AbstractEvent {
+
+    private Long id;
+    private Long ordNo;
+    private String foodStatus;
+
+    public Accepted(Cooking aggregate) {
+        super(aggregate);
+    }
+
+    public Accepted() {
+        super();
+    }
+}
